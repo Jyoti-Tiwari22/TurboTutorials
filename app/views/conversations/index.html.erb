@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Conversations</h1>
+
+<div id="conversations">
+  <% @conversations.each do |conversation| %>
+    <%= render conversation %>
+  <%# <%= link_to "Edit this conversation", edit_conversation_path(@conversation) %> |
+  <%# <%= link_to "Back to conversations", conversations_path %>
+    <p>
+      <%= link_to "Show this conversation", conversation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New conversation", new_conversation_path %>
